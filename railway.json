@@ -1,4 +1,7 @@
 {
-  "build": "cd api && npm install && npm run test && cd ../client && npm install && npm run build",
-  "start": "concurrently \"cd api && npm start\" \"cd client && npm run dev --host\""
+  "build": {
+    "api": "cd api && npm install && npm run test",
+    "client": "cd client && npm install && npm run build"
+  },
+  "start": "concurrently \"cd api && npm start\" \"cd client && npm run start\""
 }
